@@ -40,7 +40,7 @@ for idx, (start, songname) in enumerate(info):
     os.system(cmd)
 
     if len(id3_opts)>0:
-        id3_cmd = "mp3info " + id3_opts + " -n {} ".format(idx+1) + smallmp3
+        id3_cmd = "mp3info " + id3_opts + " -n {} -t \"{}\" ".format(idx+1, songname) + smallmp3
         print(id3_cmd)
         os.system(id3_cmd)
 
