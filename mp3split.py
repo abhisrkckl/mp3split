@@ -7,7 +7,10 @@ import getopt
 
 opts, args = getopt.getopt(sys.argv[1:], 'hXa:l:y:')
 
-helpmsg = "mp3split.py <mp3_file> <split_info_file>"
+helpmsg = """mp3split.py [-hX] <options>  <mp3_file> <split_info_file>
+-h  Display this message.
+-X  Just print the commands without executing them.
+<options> will be forwarded as is to mp3info. See the mp3info man page for more options."""
 if len(args)<2:
     print(helpmsg)
     sys.exit(0)
